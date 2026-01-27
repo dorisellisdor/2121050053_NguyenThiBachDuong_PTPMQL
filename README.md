@@ -53,7 +53,7 @@ Câu 6: ví dụ về viewbag :
   [VIEW]
     <h2>@ViewBag.Message</h2>
 
-cÂU 7: Gửi nhận dữ liệu giữa View và Controller thông qua Submit form:
+Câu 7: Gửi nhận dữ liệu giữa View và Controller thông qua Submit form:
 
   .Nguyên lý hoạt động:
     .Người dùng nhập dữ liệu trên View
