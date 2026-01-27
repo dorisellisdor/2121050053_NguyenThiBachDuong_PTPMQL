@@ -29,4 +29,42 @@ Câu 4:
   .View : là giao diện người dùng (UI)
       -File .cshtml dùng Razor.
       -View hiển thị dữ liệu do Controller gửi sang.
+Câu 5: ViewBag trong MVC :
+  .ViewBag là:
+    -Một dynamic object.
+    -Dùng để truyền dữ liệu từ Controller → View.
+    -Chỉ tồn tại trong 1 request.
+  .Đặc điểm:
+    -Không cần khai báo kiểu.
+    -Dùng nhanh, gọn.
+    -Phù hợp với dữ liệu đơn giản (string, number…).
+
+Câu 6: ví dụ về viewbag :
+  [CONTROLLER]
+    public class HomeController : Controller
+{
+    public ActionResult Index()
+    {
+        ViewBag.Message = "Xin chào MVC";
+        return View();
+    }
+}
+
+  [VIEW]
+    <h2>@ViewBag.Message</h2>
+
+cÂU 7: Gửi nhận dữ liệu giữa View và Controller thông qua Submit form:
+
+  .Nguyên lý hoạt động:
+    .Người dùng nhập dữ liệu trên View
+            ↓
+    .Nhấn nút Submit
+            ↓
+    .Form gửi dữ liệu (HTTP POST)
+            ↓
+    .Controller nhận dữ liệu
+            ↓
+    .Xử lý dữ liệu
+            ↓
+    .Trả dữ liệu về View
     
